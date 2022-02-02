@@ -1,27 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>url shortener</title>
-</head>
-<body>
-    <main>
-        <form method="POST">
-            <input type="text" name="url_input">
-            <input type="submit" value="Create">
-        </form>
-        {% if result %}
-        <p id="result_url">{{result}}</p>
-        <button id="copy_button">Copy URL</button>
-        {% endif %}
-        {% if redirect %}
-        <p id="redirect_error">Sorry, that path doesn't exist</p>
-        {% endif %}
-        <script src="{{ url_for('static', filename='/home.js') }}"></script>
-    </main>
-    <footer>
-        &copy; Beth & Guy
-    </footer>
-</body>
-</html>
+{% extends "index.html" %}
+{% block content %}
+    <form method="POST">
+        <input type="text" name="url_input">
+        <input type="submit" value="Create">
+    </form>
+   
+    {% if result %}
+    <p id="result_url">{{result}}</p>
+    <button id="copy_button">Copy URL</button>
+    {% endif %}
+    <script src="{{ url_for('static', filename='/home.js') }}"></script>
+
+{% endblock content %}
+

@@ -1,0 +1,12 @@
+nav{
+    width: 100%;
+    font-size: 2em;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: blue;
+    padding: 20px;
+}
+
+body{
+
+}

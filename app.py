@@ -1,4 +1,3 @@
-from operator import ne
 from flask import Flask, request, render_template, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
@@ -27,7 +26,6 @@ def home():
         url_find = Urls.query.filter_by(url = url_input).first()
         if url_find:
             result= url_find.code
-            print(url_find)
         else:
             new_url = Urls(url = url_input)
             db.session.add(new_url)
