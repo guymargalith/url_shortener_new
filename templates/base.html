@@ -12,8 +12,10 @@
             <input type="submit" value="Create">
         </form>
         {% if result %}
-        <p>{{result}}</p>
+        <p id="result_url">{{result}}</p>
+        <button id="copy_button">Copy URL</button>
         {% endif %}
+        <script src="{{ url_for('static', filename='/home.js') }}"></script>
     </main>
     <footer>
         &copy; Beth & Guy
