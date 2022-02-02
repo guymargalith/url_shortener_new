@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>url shortener</title>
+</head>
+<body>
+    <main>
+        <form method="POST">
+            <input type="text" name="url_input">
+            <input type="submit" value="Create">
+        </form>
+        {% if result %}
+        <p>{{result}}</p>
+        {% endif %}
+    </main>
+    <footer>
+        &copy; Beth & Guy
+    </footer>
+</body>
+</html>
