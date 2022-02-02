@@ -14,7 +14,7 @@ hashids = Hashids(min_length=5)
 class Urls(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     url = db.Column(db.String(1000), nullable=False)
-    code = db.Column(db.String(1000))
+    code = db.Column(db.String(15))
 
     def __repr__(self):
         return f"id: {self.id}, URL: {self.url}, code: {self.code}"
@@ -45,7 +45,7 @@ def route(code):
     if url_find:
         return redirect(url_find.url)
     else:
-        raise exceptions.NotFound()
+        return redirect('/')
             
             
 @app.errorhandler(exceptions.NotFound)

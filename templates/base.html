@@ -15,6 +15,9 @@
         <p id="result_url">{{result}}</p>
         <button id="copy_button">Copy URL</button>
         {% endif %}
+        {% if redirect %}
+        <p id="redirect_error">Sorry, that path doesn't exist</p>
+        {% endif %}
         <script src="{{ url_for('static', filename='/home.js') }}"></script>
     </main>
     <footer>
