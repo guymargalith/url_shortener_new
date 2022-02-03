@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/styles/index.css')}}"
+    />
+    <title>url shortener</title>
+</head>
+<body>
+     <nav>
+        <a href="/" id="home">Url Shortener</a>
+         </nav>
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+    <footer>
+        &copy; Beth & Guy
+    </footer>
+</body>
+</html>

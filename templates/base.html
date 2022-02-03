@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% block content %}
+    <div class="main_form">
+        <p class="create"> Create short & memorable links in seconds!</p>
+        <div class="box">
+    <form method="POST">
+        <input type="text" name="url_input" placeholder="Paste your url here" id="create-input">
+        <input id="create-button" type="submit" value="Create">
+    </form>
+   </div>
+    {% if result %}
+    <div class="copy-box">
+    <p id="result_url">{{result}}</p>
+
+    <button id="copy_button" >Copy URL</button>
+    {% endif %}
+    </div>
+    <script src="{{ url_for('static', filename='/home.js') }}"></script>
+    </div>
+{% endblock content %}
+
